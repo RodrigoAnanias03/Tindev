@@ -1,7 +1,13 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
+
+mongoose.connect("mongodb+srv://tindev:tindev@tindev-ztxdm.mongodb.net/tindev?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 //GET, POST, PUT, DELETE
 
